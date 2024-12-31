@@ -8,7 +8,7 @@ body {
     font-family: "Roboto", serif;
     font-weight: 400;
     font-style: normal;
-    height: 100vh;
+    max-height: 100vh;
 }
 .profile-img {
     border-radius: 50%;
@@ -114,6 +114,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-left: 10px;
 }
 
 .profile-options img {
@@ -123,6 +124,7 @@ body {
 .profile-options .profile-img {
     width: 3.2rem;
     height: 3.2rem;
+    
 }
 .profile-options .profile-img img {
     width: 100%;
@@ -139,7 +141,7 @@ body {
     gap: 22px;
 }
 .header .more-options div {
-    padding: 10px 24px;
+    padding: 10px 30px;
     background-color: #1992D4;
     border-radius: 24px;
     color: white;
@@ -151,6 +153,7 @@ body {
     align-items: center;
 }
 
+
 .header .who-i-am .text-aboutMe {
     padding: 0.4rem 1rem;
     font-weight: bold;
@@ -160,19 +163,165 @@ body {
     margin-top: 6px;
     font-size: 1.6rem;
     font-weight: 900;
+    text-wrap: wrap;
 }
 
 
 .who-i-am .text-aboutMe p span {
     font-size: 1.3rem;
     font-weight: 900;
+    text-wrap: wrap;
 }
 
 
 
+.main {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    grid-template-rows: 50px 1fr; 
+    padding-right: 20px;
+    padding-left: 5px;
+}
 
+.container-card {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-rows: repeat(3,1fr);
+    grid-column: 1/2;
+    gap: 25px;
+}   
+.container-card {
+    padding: 15px;
+}
+.main > h3 {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: flex-end;
+    padding-left: 15px;
+}
 .main .container-card .card {
-    width: 300px;
-    height: 150px;
-    border: solid 1px black;
+    position: relative;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card * {
+    padding-left: 12px;
+}
+
+.card-text {
+    padding: 15px;
+}
+
+.card-text p {
+    margin-top: 4px;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: rgb(85, 85, 85);
+}
+
+.card div:last-of-type {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 15px;
+}
+
+.card div:last-of-type img{
+    width: 37px;
+    height: 37px;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+.color-deco {
+    padding: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: 8px;
+    background-color: #F0B429;
+}
+
+.aside-right {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+.aside-right h3 {
+    padding-top: 30px;
+    margin: 0;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 15px;
+}
+
+.title-hate {
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+.container-hate {
+    grid-row: 2/3;
+    grid-column: 2/3;
+    background-color: #FFFFFF;
+    padding: 15px 30px;
+    border-radius: 10px;
+}
+
+.container-hate div {
+    padding: 10px 0;
+}
+.container-hate div:nth-child(2) {
+    border-top: 1px solid rgb(202, 202, 202);
+    border-bottom: 1px solid rgb(202, 202, 202);
+}
+.container-hate div h5 {
+    font-size: 0.9rem;
+}
+.container-hate div p {
+    font-size: 0.8rem;
+    color: rgb(85, 85, 85);
+    margin-top: 3px;
+    line-height: 1.2;
+}
+.container-peopleLoved {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+}
+
+
+.card-follow-people {
+    display: flex;
+    padding: 15px;
+}
+.card-follow-people div{
+    padding-left: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.card-follow-people h5 {
+    font-size: 0.9rem;
+    color: rgb(61, 61, 61);
+}
+
+.card-follow-people p {
+    font-size: 0.8rem;
+    color: rgb(85, 85, 85);
+    margin-top: 3px;
+}
+.card-follow-people img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+
 }
